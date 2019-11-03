@@ -1,0 +1,22 @@
+header {
+    background-color: rgb(10, 11, 16);
+    height: 100px;
+}
+
+.nav {
+    width: 50%;
+}
+
+.logo {
+    width: 50%;
+    background-color: rgb(10, 11, 16);
+}
+
+.nav a {
+
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    
+}

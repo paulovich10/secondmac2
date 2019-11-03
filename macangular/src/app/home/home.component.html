@@ -1,0 +1,88 @@
+
+<section class="contenedorCabecera">
+
+    <div class="cabecera">
+
+        <div class="contenedor">
+            <h1>Compra y vende tu ordenador de la forma más segura</h1>
+            <div class="wrapperBtn"> 
+                <a class="btn">accede</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div>
+
+            <div class="flex flex-row contenedorFunc">
+
+                    <img src="../../assets/productos.png" alt="ordenadores mac">
+                
+                    <div class="contenidoFunc flex flex-column justify-center">
+
+                        <h2>¿Cómo funciona?</h2>
+
+                        <p>Nos ocupamos de todo, recogemos el dispositivo en tu casa en el horario que nos indiques
+                            El comprador dispone de cinco días para comprobar que todo está acorde a lo esperado
+                            y, si no, pude devolver el producto.</p>
+
+                        <div class="wrapperBtn flex justify-center">
+                            <a class="btn">Saber más</a>
+                        </div>
+                    </div>
+                    
+
+            </div>
+
+    </div>
+
+    <div class="mobile">
+
+        <div class="contenedorMobile mitad flex flex-column justify-center content-center">
+
+            <h2>Todos los dispositivos</h2>
+
+            <p>Todos los dispositivos son aceptados siempre que lo hayas adquirido en un distribuidor autorizado. 
+                Tienes muchas más oportuniades de que tu dispositivo se venda si dispone de los accesorios originales, caja y ticket de compra, aunque no esté en garantía.
+            </p>
+
+            <div class="wrapperBtn flex justify-center">
+                    <a class="btn">Saber más</a>
+            </div>
+
+
+        </div>
+
+        <div class="mitad">
+            <img src="../../assets/mobiles.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="carrousel flex flex-row justify-center items-center">
+
+        <div class="opiniones" *ngFor="let opinion of arrOpiniones; let i = index">
+
+            <div>
+                <img [src]="opinion.imagen">
+
+                <h3>{{i}} {{opinion.nombre}}</h3>
+                
+                <p>{{opinion.texto}}</p>
+
+            </div>
+
+            
+
+        </div>
+
+        <button (click)="cambiarSlide('prev')"><i class="fas fa-chevron-left"></i></button>
+        <button (click)="cambiarSlide('next')"><i class="fas fa-chevron-right"></i></button>
+
+
+    </div>
+
+</section>
+
+
