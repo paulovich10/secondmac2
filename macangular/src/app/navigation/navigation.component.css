@@ -5,6 +5,7 @@ header {
 
 .nav {
     width: 50%;
+    position: relative;
 }
 
 .logo {
@@ -18,5 +19,46 @@ header {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     font-size: 1.1rem;
+    cursor: pointer;
     
+}
+
+/* login */
+
+.login {
+
+    position: absolute;
+    top: 8%;
+    left: 72%;
+    z-index: 999;
+
+}
+
+form {
+
+    background-color: rgb(31, 31, 32);
+    width: 180px;
+    padding: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+    
+}
+
+label {
+
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+input[type='submit'] {
+
+    border: none;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    padding: 3%;
+    border-radius: 20px;
+    width: 50%;
+
 }

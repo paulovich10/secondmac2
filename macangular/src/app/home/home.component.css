@@ -1,4 +1,4 @@
-section {
+section, footer {
 
     font-family: 'Montserrat', sans-serif;
 }
@@ -156,7 +156,12 @@ i {
 .fa-chevron-left {
 
     position: absolute;
-    left: 0;
+    left: 30%;
+}
+.fa-chevron-right {
+
+    position: absolute;
+    right: 25%;
 }
 
 .active {
@@ -164,6 +169,90 @@ i {
     display: none;
 
 }
+
+/* footer */
+
+footer {
+
+    padding-top: 100px;
+    background-color: white;
+}
+
+ul {
+
+    list-style: none;
+}
+
+ul li{
+
+    padding-bottom: 15px;
+    font-size: .9em;
+    color: #838286;
+   
+}
+
+ul>li:first-child {
+
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.container {
+   width: 100%;
+   max-width: 1300px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 5%;
+}
+
+.extra-padding {
+
+    width: 20%;
+    
+}
+ .expand {
+
+     width: 80%;
+ }
+
+i {
+    padding-right: 3%;
+    font-size: 1.2rem;
+}
+
+
+ hr {
+
+   width: 70%;
+   display: block;
+   margin: auto;
+   height: 0;
+   border-top: 1px solid #eee;
+   border-bottom: none;
+
+}
+
+.modoPago img {
+
+    padding-left: 1%;
+    padding-right: 1%;
+    width: 120px;
+}
+
+.modoPago img:nth-child(2) {
+
+    width: 80px;
+}
+
+.container.dos {
+    margin-top: 3%;
+}
+
+.container.dos p {
+
+    color:#838286;
+}
+
 
 
 

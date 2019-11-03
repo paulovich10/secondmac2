@@ -4,13 +4,27 @@
        
         <nav class="nav flex justify-around items-center">
             <a [routerLink]="['/home']">Home</a>
-            <a [routerLink]="['/profile']">Mi cuenta</a>
+            <a [routerLink]="['/profile']">Entrar</a>
+            <a (click)="toggleLogin()">Log In</a>
             <a [routerLink]="['/registration']">Vender mi ordenador</a>
         </nav>
 
         <div class="logo">
 
 
+        </div>
+
+        <div class="login" *ngIf="mostrarLogin">
+
+            <form action="" class="flex flex-column">
+
+                    <label for="usuario">Usuario</label>
+                    <input type="text">
+                    <label for="contraseña">Contraseña</label>
+                    <input type="text">
+                    <input type="submit" value="Enviar"> 
+
+            </form>
         </div>
     </header>
 </div>

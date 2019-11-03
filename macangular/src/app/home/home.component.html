@@ -62,9 +62,9 @@
 
     <div class="carrousel flex flex-row justify-center items-center">
 
-        <div class="opiniones" *ngFor="let opinion of arrOpiniones; let i = index">
+        <div class="opiniones">
 
-            <div>
+            <div *ngIf="opinion">
                 <img [src]="opinion.imagen">
 
                 <h3>{{i}} {{opinion.nombre}}</h3>
@@ -77,12 +77,80 @@
 
         </div>
 
-        <button (click)="cambiarSlide('prev')"><i class="fas fa-chevron-left"></i></button>
-        <button (click)="cambiarSlide('next')"><i class="fas fa-chevron-right"></i></button>
+        <button (click)="onCambiarSlide('prev')" [disabled]="this.id==1"><i class="fas fa-chevron-left"></i></button>
+        <button (click)="onCambiarSlide('next')" [disabled]="this.id==4"><i class="fas fa-chevron-right"></i></button>
 
 
     </div>
 
 </section>
+<footer class="flex flex-column" id="footer">
+
+    <div class="container flex flex-row justify-between">
+
+        <div class="flex flew-row expand">
+
+                <div class="extra-padding">
+
+                    <ul>
+                        <li>SecondMac</li>
+                        <li>Servicio a empresas</li>
+                        <li>Compromiso</li>
+                        <li>Blog</li>
+                    </ul>
+
+
+                </div>
+                <div class="extra-padding">
+
+                    <ul>
+                        <li>Ayuda</li>
+                        <li>Contacto</li>
+                        <li>FAQs</li>
+                        <li>Legal</li>
+                    </ul>
+
+
+
+                </div>
+                <div class="extra-padding">
+
+                    <ul class="social">
+                        <li>Seamos amigos</li>
+                        <li><i class="fab fa-facebook-square"></i>Facebook</li>
+                        <li><i class="fab fa-instagram"></i>Instagram</li>
+                        <li><i class="fab fa-twitter"></i>Twitter</li>
+                        <li><i class="fab fa-linkedin"></i>Linkedin</li>
+                    </ul>
+
+
+                </div>
+
+        </div>
+
+        <div>
+
+            
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="container dos flex flex-row justify-between content-center">
+        <div class="modoPago flex flex-row justify-around content-center">
+            <img src="../assets/ico-visa.svg" alt="">
+            <img src="../assets/ico-mastercard.svg" alt="">
+            <img src="../assets/PayPal.png" alt="">
+        </div>
+        <div class="flex items-center">
+
+            <small><p>Copyright © 2019 | Todos los derechos reservados.</p></small>
+
+        </div>
+    </div>
+ 
+</footer>
 
 
