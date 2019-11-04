@@ -3,6 +3,7 @@ import { Opinion } from './models/opinion.model';
 import { OPINIONES } from './db/opiniones.db';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +18,5 @@ export class UsuariosService {
       //console.log(OPINIONES)
     })
   }
-
  
 }

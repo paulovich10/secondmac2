@@ -11,7 +11,7 @@ export class NavigationComponent implements OnInit {
 
   constructor() {
 
-    this.mostrarLogin = true;
+    this.mostrarLogin = false;
    }
 
   ngOnInit() {
