@@ -9,7 +9,6 @@ import { Modelo } from '../models/modelo.model';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
   arrProductos: Producto[];
   producto: Producto[];
   arrModelos: Modelo[];
@@ -23,12 +22,13 @@ export class RegistrationComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    this.iniciarArray();
+    this.productoServicio.getAllProductos()
+      .then(arr => {
+        this.arrProductos = arr
+      })
   }
 
   iniciarArray() {
-
     this.productoServicio.getAllProductos()
       .then(arr => {
         this.arrProductos = arr
@@ -37,11 +37,18 @@ export class RegistrationComponent implements OnInit {
 
   }
 
-  onSelect(productoId) {
-    this.productoServicio.getAllProductos()
-      .then(response => {
-        console.log(response)
-      })
+  async onSelect(productoId) {
+    this.arrModelos = await this.productoServicio.getAllModelos()
+    let filtrarById = (modelo) =>{
+      if (modelo.productoId == productoId) return true
+      return false
+    }
+    try{
+      this.arrModelos = this.arrModelos.filter(filtrarById)
+      console.log(this.arrModelos)
+    }catch(err){
+      console.log(err)
+    }
   }
 
 }

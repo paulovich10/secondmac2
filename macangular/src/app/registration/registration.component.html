@@ -8,6 +8,10 @@
             <option value="0">--Select--</option>
             <option *ngFor="let producto of arrProductos" value={{producto.id}}>{{producto.nombre}}</option>
         </select>
+        <select>
+            <option value="0">--Select--</option>
+            <option *ngFor="let modelo of arrModelos" value={{modelo.id}}>{{modelo.nombre}}</option>
+        </select>
 
     </div>
 
