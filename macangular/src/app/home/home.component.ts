@@ -9,7 +9,6 @@ import { UsuariosService } from '../usuarios.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   arrOpiniones: Opinion[] = [];
   id: number;
   opinion: any;
@@ -22,39 +21,26 @@ export class HomeComponent implements OnInit {
 
   onCambiarSlide(action) {
     switch (action){
-
       case 'prev':
-         if(--this.id >= 0) 
+         --this.id
+         if(this.id >= 0) 
          this.opinion = this.arrOpiniones[this.id];
            
          break;
       case 'next':
-        if(++this.id <= this.arrOpiniones.length) 
+        ++this.id
+        if(this.id <= this.arrOpiniones.length) 
         this.opinion = this.arrOpiniones[this.id];
          break;
-        
     }
-
   }
-
 
   ngOnInit() {
-
-    this.iniciarArray();
-  }
-
-
-  iniciarArray() {
-
   this.servicioUsuarios.getAllOpiniones()
-  .then(arr =>{
-    this.arrOpiniones = arr;    
-    
-
-  })
-
-  
-}
-
+    .then(arr =>{
+      this.arrOpiniones = arr;
+      this.opinion = this.arrOpiniones[0]
+    })
+  }
 
 }

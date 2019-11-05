@@ -13,9 +13,8 @@ export class UsuariosService {
 
   getAllOpiniones(): Promise<Opinion[]>{
     return new Promise<Opinion[]> ((resolve, reject)=>{
-
       resolve (OPINIONES);
-      //console.log(OPINIONES)
+      // console.log(OPINIONES)
     })
   }
  
