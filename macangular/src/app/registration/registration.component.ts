@@ -13,11 +13,13 @@ export class RegistrationComponent implements OnInit {
   arrProductos: Producto[];
   producto: Producto[];
   arrModelos: Modelo[];
+  productoSeleccionado: Producto;
 
-  constructor(private productoServicio: ProductosService) { 
+  constructor(private productoServicio: ProductosService) {
 
     this.arrProductos = [];
     this.arrModelos = [];
+    this.productoSeleccionado = new Producto(1, 'Iphone');
   }
 
   ngOnInit() {
@@ -28,18 +30,18 @@ export class RegistrationComponent implements OnInit {
   iniciarArray() {
 
     this.productoServicio.getAllProductos()
-    .then(arr => {
-      this.arrProductos = arr
+      .then(arr => {
+        this.arrProductos = arr
 
-    })
+      })
 
   }
 
   onSelect(productoId) {
     this.productoServicio.getAllProductos()
-    .then(response=>{
-      console.log(response)
-    })
+      .then(response => {
+        console.log(response)
+      })
   }
 
 }

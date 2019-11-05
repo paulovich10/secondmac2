@@ -15,17 +15,16 @@ p{
     background-repeat: no-repeat;
     height: 90vh;
     width: 100%;
-    position: relative;
+   
     
 }
 
 .contenedor {
 
-    color: white;
-    position: absolute;
-    top: 30%;
-    left: 35%;
+    color: white;   position: absolute;
+    transform: translate(70%,40%);
     width: 600px;
+    height: 500px;
     text-align: center;
 
 }
@@ -33,6 +32,7 @@ p{
 .contenedor h1 {
     font-size: 2.2rem;
     line-height: 1.5;
+    padding-bottom: 5%;
 }
 
 .wrapperBtn {
@@ -44,7 +44,7 @@ p{
     font-size: 1rem;
     background-color: rgba(46, 167, 238);
     padding: 10px 20px;
-    border-radius: 20px;  
+    border-radius: 20px;
 }
 
 h2 {
