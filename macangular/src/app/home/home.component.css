@@ -21,11 +21,12 @@ p{
 
 .contenedor {
 
-    color: white;   position: absolute;
-    transform: translate(70%,40%);
+    color: white;   
+    text-align: center;
+  
     width: 600px;
     height: 500px;
-    text-align: center;
+   
 
 }
 
