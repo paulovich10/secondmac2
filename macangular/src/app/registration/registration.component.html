@@ -4,12 +4,12 @@
 
         <h2></h2>
         <label>Selecciona Producto:</label>
-        <select [(ngModel)]="productoSeleccionado.id" (change)="onSelect($event.target.value)">
+        <select [(ngModel)]="productoSeleccionado.id" (change)="onSelect($event.target.value)" class="select-css">
             <option value="0">--Select--</option>
             <option *ngFor="let producto of arrProductos" value={{producto.id}}>{{producto.nombre}}</option>
         </select>
         <label>Selecciona modelo:</label>
-        <select>
+        <select class="select-css">
             <option value="0">--Select--</option>
             <option *ngFor="let modelo of arrModelos" value={{modelo.id}}>{{modelo.nombre}}</option>
         </select>
@@ -17,7 +17,7 @@
 
         <div>
             <label>Selecciona la capacidad:</label>
-            <select>
+            <select class="select-css">
                 <option value="0">--Select--</option>
                 <option *ngFor="let capacidad of arrCapacidades" value={{capacidad.id}}>{{capacidad.nombre}}</option>
             </select>
@@ -27,9 +27,9 @@
         <div>
 
             <label>Selecciona la memoria RAM:</label>
-            <select>
+            <select class="select-css">
                 <option value="0">--Select--</option>
-                <option></option>
+                <option *ngFor="let ram of arrRam" value={{ram.id}}>{{ram.nombre}}</option>
             </select>
 
         </div>

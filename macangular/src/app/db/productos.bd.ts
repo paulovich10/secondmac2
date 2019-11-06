@@ -290,15 +290,15 @@ export const RAM = [
         nombre: '4Gb'
     },
     {
-        id: 1,
+        id: 3,
         nombre: '8Gb'
     },
     {
-        id: 1,
+        id: 4,
         nombre: '16Gb'
     },
     {
-        id: 1,
+        id: 5,
         nombre: '32Gb'
     }
 

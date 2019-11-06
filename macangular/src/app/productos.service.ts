@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { PRODUCTOS } from './db/productos.bd';
 import { MODELOS } from './db/productos.bd';
+import { RAM } from './db/productos.bd'
 
 import { CAPACIDADES } from './db/productos.bd';
 import { Producto } from './models/producto.model';
 import { Modelo } from './models/modelo.model';
 import { Capacidad } from './models/capacidad.model';
+import { Ram } from './models/ram.model'
 
 
 
@@ -29,6 +31,9 @@ export class ProductosService {
   getAllCapacidades(): Capacidad[] {
     return (CAPACIDADES);
 
+  }
+  getAllRam(): Ram[] {
+    return (RAM);
   }
 }
 

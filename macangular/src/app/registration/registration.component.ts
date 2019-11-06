@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductosService } from '../productos.service';
 import { Producto } from '../models/producto.model'
-import { Modelo } from '../models/modelo.model';
 import { Capacidad } from '../models/capacidad.model';
+import { Ram } from '../models/ram.model'
+import { VirtualTimeScheduler } from 'rxjs';
 
 @Component({
   selector: 'app-registration',
@@ -15,6 +16,7 @@ export class RegistrationComponent implements OnInit {
   arrModelos: Producto[];
   productoSeleccionado: Producto;
   arrCapacidades: Capacidad[];
+  arrRam: Ram[];
 
   constructor(private productoServicio: ProductosService) {
 
@@ -22,6 +24,7 @@ export class RegistrationComponent implements OnInit {
     this.arrModelos = [];
     this.productoSeleccionado = new Producto(1, 'Iphone');
     this.arrCapacidades = [];
+    this.arrRam = [];
   }
 
   ngOnInit() {
@@ -37,6 +40,7 @@ export class RegistrationComponent implements OnInit {
 
     this.arrProductos = this.productoServicio.getAllProductos();
     this.arrCapacidades = this.productoServicio.getAllCapacidades();
+    this.arrRam = this.productoServicio.getAllRam();
 
   }
 
