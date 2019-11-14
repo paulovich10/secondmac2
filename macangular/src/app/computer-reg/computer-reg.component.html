@@ -1,0 +1,45 @@
+<section class="wrapperForm">
+
+    <div class="ordenador flex flex-column">
+
+        <img src="../../assets/devices.jpg">
+
+        <div>
+            <label>Selecciona Producto:</label>
+            <select [(ngModel)]="productoSeleccionado.id" (change)="onSelect($event.target.value)" class="select-css">
+                <option value="0">--Select--</option>
+                <option *ngFor="let producto of arrProductos" value={{producto.id}}>{{producto.nombre}}</option>
+            </select>
+
+        </div>
+        <div>
+            <label>Selecciona modelo:</label>
+            <select class="select-css">
+                <option value="0">--Select--</option>
+                <option *ngFor="let modelo of arrModelos" value={{modelo.id}}>{{modelo.nombre}}</option>
+            </select>
+        </div>
+
+
+        <div>
+            <label>Selecciona la capacidad:</label>
+            <select class="select-css">
+                <option value="0">--Select--</option>
+                <option *ngFor="let capacidad of arrCapacidades" value={{capacidad.id}}>{{capacidad.nombre}}</option>
+            </select>
+
+        </div>
+
+        <div>
+
+            <label>Selecciona la memoria RAM:</label>
+            <select class="select-css">
+                <option value="0">--Select--</option>
+                <option *ngFor="let ram of arrRam" value={{ram.id}}>{{ram.nombre}}</option>
+            </select>
+
+        </div>
+
+    </div>
+
+</section>
