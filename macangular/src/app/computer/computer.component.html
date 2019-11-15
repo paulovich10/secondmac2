@@ -1,0 +1,94 @@
+<section class="wrapperForm">
+
+    <div class="flex justify-center">
+
+        <form class="ordenador">
+
+            <div class="cabecera">
+
+                <h3>Vende tu ordenador</h3>
+
+            </div>
+
+            <div class="flex flex-row justify-center">
+                <fieldset>
+
+                    <div>
+                        <label>Selecciona Producto:</label>
+                        <select [(ngModel)]="productoSeleccionado.id" (change)="onSelect($event.target.value)"
+                            [ngModelOptions]="{standalone: true}" class="select-css">
+                            <option value="0">--Select--</option>
+                            <option *ngFor="let producto of arrProductos" value={{producto.id}}>{{producto.nombre}}
+                            </option>
+                        </select>
+
+                    </div>
+                    <div>
+                        <label>Selecciona modelo:</label>
+                        <select class="select-css">
+                            <option value="0">--Select--</option>
+                            <option *ngFor="let modelo of arrModelos" value={{modelo.id}}>{{modelo.nombre}}</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Selecciona la capacidad:</label>
+                        <select class="select-css">
+                            <option value="0">--Select--</option>
+                            <option *ngFor="let capacidad of arrCapacidades" value={{capacidad.id}}>{{capacidad.nombre}}
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <div>
+
+                        <label>Selecciona la memoria RAM:</label>
+                        <select class="select-css">
+                            <option value="0">--Select--</option>
+                            <option *ngFor="let ram of arrRam" value={{ram.id}}>{{ram.nombre}}</option>
+                        </select>
+
+                    </div>
+                </fieldset>
+
+                <fieldset class="flex flex-column">
+                    <div class="flex flex-column">
+                        <label>Numero de serie:</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="flex flex-column">
+                        <label>Título del anuncio:</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="flex flex-column">
+                        <label>Descripción</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <label class="image-upload-container btn btn-bwm">
+                        <span>Select Image</span>
+                        <input #imageInput type="file" accept="image/*" (change)="processFile(imageInput)">
+                    </label>
+
+                </fieldset>
+
+                <fieldset>
+
+
+
+
+
+
+                </fieldset>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>

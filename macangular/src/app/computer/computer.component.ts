@@ -5,12 +5,11 @@ import { Capacidad } from '../models/capacidad.model';
 import { Ram } from '../models/ram.model'
 
 @Component({
-  selector: 'app-computer-reg',
-  templateUrl: './computer-reg.component.html',
-  styleUrls: ['./computer-reg.component.css']
+  selector: 'app-computer',
+  templateUrl: './computer.component.html',
+  styleUrls: ['./computer.component.css']
 })
-export class ComputerRegComponent implements OnInit {
-
+export class ComputerComponent implements OnInit {
   arrProductos: Producto[];
   producto: Producto[];
   arrModelos: Producto[];
@@ -25,12 +24,12 @@ export class ComputerRegComponent implements OnInit {
     this.productoSeleccionado = new Producto(1, 'Iphone');
     this.arrCapacidades = [];
     this.arrRam = [];
-  }
 
+  }
   ngOnInit() {
 
     this.iniciarArray();
-    //al seleccionar en el desplagabla un producto, me traigo el id y se lo paso por parametro a 
+    //al seleccionar en el desplagable un producto, me traigo el id y se lo paso por parametro a 
     this.onSelect(this.productoSeleccionado.id);
   }
 
@@ -48,5 +47,10 @@ export class ComputerRegComponent implements OnInit {
 
   }
 
+  processFile(e) {
+
+
+    console.log(e.target.files[0])
+  }
 
 }
