@@ -13,34 +13,33 @@
 	border-radius: .3em;
 }
 
+.wrapperForm {
+
+    width: 950px;
+    border: 1px solid black;
+    margin-bottom: 5%;
+}
+
 .cabecera {
 
-    background-color: lightblue;
+    background-color: lightskyblue;
     text-align: center;
-    font-size: 1.2rem;
+    padding: 20px;
 }
 
-h3 {
 
-    font-family: 'Montserrat', sans-serif;
-    padding: 2%;
-}
 
 select:focus {
 	box-shadow: none;
 }
 
+select {
 
-img {
-
-	width: 200px;
+    margin-top: 15px;
 }
+label {
 
-form {
-    width: 850px;
-    height: 500px;
-    border: 1px solid black;
-    margin: 5%;
+    padding-bottom: 10px;
 }
 
 input {
@@ -48,9 +47,19 @@ input {
     height: 2rem;
 }
 
+input[type="text"] {
+
+    font-size: 1rem;
+}
+
+form {
+
+    padding: 5%;
+}
+
 fieldset {
 
-    border: none; 
+    border: none;
 }
 
 fieldset > div {
@@ -58,3 +67,41 @@ fieldset > div {
     padding: 3%;
 
 }
+
+.radio {
+
+    display: flex;
+    align-content: center;
+   
+}
+
+.radio span {
+
+    line-height: 2.1;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px 5px;
+}
+
+.extraPadding {
+
+    width: 250px;
+}
+
+fieldset:nth-child(3) {
+
+    padding-left: 5%;
+}
+
+button {
+
+    background-color: lightskyblue;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 5%;
+    margin-top: 8%;
+    margin-left: 40%;
+    color: rgb(65, 62, 62);
+}
+
+

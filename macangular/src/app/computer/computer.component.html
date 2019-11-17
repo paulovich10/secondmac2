@@ -1,17 +1,13 @@
-<section class="wrapperForm">
+<section class="flex justify-center">
 
-    <div class="flex justify-center">
+    <div class="flex justify-center flex-column wrapperForm">
+
+        <h3 class="cabecera">Vende tu dispositivo Mac</h3>
 
         <form class="ordenador">
 
-            <div class="cabecera">
-
-                <h3>Vende tu ordenador</h3>
-
-            </div>
-
             <div class="flex flex-row justify-center">
-                <fieldset>
+                <fieldset class="extraPadding">
 
                     <div>
                         <label>Selecciona Producto:</label>
@@ -76,11 +72,37 @@
                 </fieldset>
 
                 <fieldset>
+                    <div>
+                        <label>¿Dispone el artículo de complementos?</label><br>
+                        <div class="radio">
+                            <input type="radio" name="complementos" value="S" checked><span>Sí</span>
+                            <input type="radio" name="complementos" value="N"><span>No</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>¿El producto cuenta con su caja original?</label><br>
+                        <div class="radio">
+                            <input type="radio" name="caja" value="S" checked><span>Sí</span>
+                            <input type="radio" name="caja" value="N"><span>No</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>¿El producto está listo para ser enviado?</label><br>
+                        <div class="radio">
+                            <input type="radio" name="envio" value="S" checked><span>Sí</span>
+                            <input type="radio" name="envio" value="N"><span>No</span>
+                        </div>
+                    </div>
 
 
+                    <div class="flex flex-column">
+                        <label>Precio en euros:</label>
+                        <input type="text">
+                    </div>
 
-
-
+                    <button (click)="navigatetoUsuario()">Siguiente</button>
 
                 </fieldset>
 

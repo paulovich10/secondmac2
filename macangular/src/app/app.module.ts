@@ -25,6 +25,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

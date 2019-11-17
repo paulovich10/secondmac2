@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ProductosService } from '../productos.service';
 import { Producto } from '../models/producto.model'
 import { Capacidad } from '../models/capacidad.model';
-import { Ram } from '../models/ram.model'
+import { Ram } from '../models/ram.model';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-computer',
@@ -16,8 +18,9 @@ export class ComputerComponent implements OnInit {
   productoSeleccionado: Producto;
   arrCapacidades: Capacidad[];
   arrRam: Ram[];
+  route: any;
 
-  constructor(private productoServicio: ProductosService) {
+  constructor(private productoServicio: ProductosService, private router: Router, private r: ActivatedRoute) {
 
     this.arrProductos = [];
     this.arrModelos = [];
@@ -48,9 +51,12 @@ export class ComputerComponent implements OnInit {
   }
 
   processFile(e) {
-
-
     console.log(e.target.files[0])
+  }
+
+  navigatetoUsuario() {
+    this.router.navigate(["../usuario"], { relativeTo: this.r });
+
   }
 
 }
