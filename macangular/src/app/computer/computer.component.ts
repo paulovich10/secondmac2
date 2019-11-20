@@ -36,7 +36,9 @@ export class ComputerComponent implements OnInit {
     this.arrRam = [];
     this.arrProcesadores = [];
     this.modeloSeleccionado = new Modelo(1, 1, 'Iphone 11');
-    this.procesador = []
+    this.procesador = [];
+
+
 
 
   }
@@ -45,7 +47,7 @@ export class ComputerComponent implements OnInit {
     this.iniciarArray();
     //al seleccionar en el desplagable un producto, me traigo el id y se lo paso por parametro a 
     this.onSelect(this.productoSeleccionado.id);
-    this.onSelectModel(this.modeloSeleccionado.id);
+    //this.onSelectModel(this.modeloSeleccionado.id);
 
   }
 
@@ -55,6 +57,7 @@ export class ComputerComponent implements OnInit {
     this.arrCapacidades = this.productoServicio.getAllCapacidades();
     this.arrRam = this.productoServicio.getAllRam();
 
+
   }
 
   onSelect(productoId) {
@@ -62,13 +65,10 @@ export class ComputerComponent implements OnInit {
 
   }
 
-
-  onSelectModel(modeloId) {
-    this.arrProcesadores = this.productoServicio.getAllProcesadores().filter((procesador) => {
-      procesador.modeloId.forEach(element => console.log(element))
-
-    })
-
+  onSelectModelo(modeloId) {
+    this.arrProcesadores = this.productoServicio.getAllProcesadores()
+      .filter(procesador => { return procesador.modeloId.includes(parseInt(modeloId)) }
+      )
   }
 
 
