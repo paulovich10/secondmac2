@@ -126,120 +126,128 @@ export const MODELOS = [
         productoId: 2,
         nombre: 'MacBook Air'
     },
+
     {
         id: 22,
         productoId: 2,
-        nombre: 'IMac'
+        nombre: 'MacBook Pro'
     },
     {
         id: 23,
         productoId: 2,
-        nombre: 'IMac Pro'
-    },
-    {
-        id: 24,
-        productoId: 2,
-        nombre: 'Mac Pro'
+        nombre: 'IMac'
     },
     {
         id: 25,
         productoId: 2,
-        nombre: 'Mac Mini'
+        nombre: 'IMac Pro'
     },
     {
         id: 26,
         productoId: 2,
-        nombre: 'Monitores'
+        nombre: 'Mac Pro'
     },
     {
         id: 27,
         productoId: 2,
-        nombre: 'Vintage MacBook'
+        nombre: 'Mac Mini'
     },
     {
         id: 28,
         productoId: 2,
-        nombre: 'Accesorios Mac'
+        nombre: 'Monitores'
+    },
+    {
+        id: 29,
+        productoId: 2,
+        nombre: 'Vintage MacBook'
     },
     {
         id: 30,
+        productoId: 2,
+        nombre: 'Accesorios Mac'
+    },
+    {
+        id: 31,
         productoId: 3,
         nombre: 'Ipad Retina 10.2'
 
     },
     {
-        id: 31,
+        id: 32,
         productoId: 3,
         nombre: 'Ipad Air 2'
 
     },
     {
-        id: 32,
+        id: 33,
         productoId: 3,
         nombre: 'Ipad Air'
 
     },
     {
-        id: 33,
+        id: 34,
         productoId: 3,
         nombre: 'Ipad Pro'
 
     },
     {
-        id: 34,
+        id: 35,
         productoId: 3,
         nombre: 'Ipad mini'
 
     },
 
     {
-        id: 35,
+        id: 36,
         productoId: 3,
         nombre: 'Ipad (6ª generación)'
 
     },
     {
 
-        id: 36,
+        id: 37,
         productoId: 3,
         nombre: 'Ipad (5ª generación)'
 
     },
 
     {
-        id: 37,
+        id: 38,
         productoId: 3,
         nombre: 'Ipad (4ª generación)'
 
     },
 
     {
-        id: 38,
+        id: 39,
         productoId: 3,
         nombre: 'Ipad 3'
 
     },
 
     {
-        id: 39,
+        id: 40,
         productoId: 3,
         nombre: 'Ipad 2'
 
     },
 
     {
-        id: 40,
+        id: 41,
         productoId: 3,
         nombre: 'Ipad 1'
 
     },
 
     {
-        id: 41,
+        id: 42,
         productoId: 3,
         nombre: 'Accesorios Ipad'
 
     }
+
+
 
 ]
 
@@ -301,5 +309,102 @@ export const RAM = [
         id: 5,
         nombre: '32Gb'
     }
+
+]
+
+export const PROCESADORES = [
+
+    {
+        id: 1,
+        modeloId: [23],
+        nombre: 'Intel i3'
+    },
+    {
+        id: 2,
+        modeloId: [20, 21, 22, 23, 27],
+        nombre: 'Intel i5'
+    },
+    {
+        id: 3,
+        modeloId: [20, 21, 22, 23, 27],
+        nombre: 'Intel i7'
+    },
+    {
+        id: 4,
+        modeloId: [20, 21, 22],
+        nombre: 'Intel Core M'
+    },
+    {
+        id: 5,
+        modeloId: [22, 23],
+        nombre: 'Intel Core Duo'
+    },
+    {
+        id: 6,
+        modeloId: [21, 22, 23],
+        nombre: 'Intel Core 2 Duo'
+    },
+    {
+        id: 7,
+        modeloId: [22],
+        nombre: 'Intel i9'
+    },
+    {
+        id: 8,
+        modeloId: [21, 23],
+        nombre: 'Intel Quad Core i7'
+    },
+    {
+        id: 9,
+        modeloId: [23],
+        nombre: 'Intel Quad Core i5'
+    },
+
+    {
+        id: 10,
+        modeloId: [25],
+        nombre: 'Xeon Quad Core'
+    },
+    {
+        id: 11,
+        modeloId: [25],
+        nombre: 'Xeon 8-Core'
+    },
+    {
+        id: 12,
+        modeloId: [25],
+        nombre: 'Xeon 4-Core Nehalem'
+    },
+    {
+        id: 13,
+        modeloId: [25],
+        nombre: 'Xeon 8-Core Nehalem'
+    },
+    {
+        id: 14,
+        modeloId: [25],
+        nombre: 'Xeon 12-Core Nehalem'
+    },
+    {
+        id: 15,
+        modeloId: [25],
+        nombre: 'Intel Xeon W de 8 núcleos'
+    },
+    {
+        id: 16,
+        modeloId: [25],
+        nombre: 'Intel Xeon W de 10 núcleos'
+    },
+    {
+        id: 17,
+        modeloId: [25],
+        nombre: 'Intel Xeon W de 14 núcleos'
+    },
+    {
+        id: 18,
+        modeloId: [25],
+        nombre: 'Intel Xeon W de 18 núcleos'
+    }
+
 
 ]

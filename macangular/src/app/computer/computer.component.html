@@ -36,6 +36,18 @@
                         </select>
 
                     </div>
+                    <div>
+                        <label>Selecciona el Procesador:</label>
+                        <select class="select-css" [(ngModel)]="modeloSeleccionado.Id"
+                            (change)="onSelectModel($event.target.value)" [ngModelOptions]="{standalone: true}"
+                            class="select-css">
+                            <option value="0">--Select--</option>
+                            <option *ngFor="let procesador of arrProcesadores" value={{procesador.id}}>
+                                {{procesador.nombre}}
+                            </option>
+                        </select>
+
+                    </div>
 
                     <div>
 

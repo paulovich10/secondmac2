@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { PRODUCTOS } from './db/productos.bd';
 import { MODELOS } from './db/productos.bd';
 import { RAM } from './db/productos.bd'
-
 import { CAPACIDADES } from './db/productos.bd';
+import { PROCESADORES } from './db/productos.bd'
+
 import { Producto } from './models/producto.model';
 import { Modelo } from './models/modelo.model';
 import { Capacidad } from './models/capacidad.model';
-import { Ram } from './models/ram.model'
+import { Ram } from './models/ram.model';
+import { Procesador } from './models/procesador.model';
 
 
 
@@ -34,6 +36,10 @@ export class ProductosService {
   }
   getAllRam(): Ram[] {
     return (RAM);
+  }
+
+  getAllProcesadores(): Procesador[] {
+    return (PROCESADORES)
   }
 }
 

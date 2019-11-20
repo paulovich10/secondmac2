@@ -16,11 +16,7 @@ const routes: Routes = [
   {
     path: 'registration', component: RegistrationComponent, children: [
       { path: '', component: ComputerComponent },
-      {
-        path: 'computer', component: ComputerComponent, children: [
-          { path: 'usuario', component: UsuarioComponent }
-        ]
-      },
+      { path: 'computer', component: ComputerComponent },
       { path: 'usuario', component: UsuarioComponent }
 
     ]
