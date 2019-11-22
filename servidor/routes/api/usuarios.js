@@ -15,7 +15,7 @@ router.post('/', (req, res) => {
 
 router.post('/registro', async (req, res) => {
     //console.log(req.body);
-    //req.body.contrasenha = bcrypt.hashSync(req.body.contrasenha, 10);
+    req.body.contrasenha = bcrypt.hashSync(req.body.contrasenha, 10);
 
     try {
         let email = await modelUsuarios.getByEmail(req.body.email)

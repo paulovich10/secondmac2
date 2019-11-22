@@ -80,3 +80,54 @@ h3 {
     font-size: 1.2rem;
     
 }
+
+/*-----formulario-----*/
+
+
+.wrapperForm {
+
+    width: 500px;
+    border: 1px solid black;
+	margin: 5%;
+
+	
+}
+
+.cabecera {
+
+    background-color: lightskyblue;
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+
+	padding: 4px;
+	margin: 2%;
+	font-size: 1rem;
+	
+}
+
+form {
+
+	padding: 10%;
+}
+
+
+label {
+
+	padding-top: 2%;
+
+}
+
+.btn {
+
+    background-color: lightskyblue;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+	color: rgb(65, 62, 62);
+	width: 200px;
+	margin: 5% auto;
+}

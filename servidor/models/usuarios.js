@@ -1,14 +1,16 @@
 const db = require('../db');
 
 //el registro va a ser solo email y contraseña, pondrá el resto null y hacr un update 
-const insert = ({ nombre, apellidos, email, nickname, contrasenha }) => {
+
+
+const insert = ({ email, nickname, contrasenha }) => {
     return new Promise((resolve, reject) => {
-        db.get().query('insert into usuarios (nombre, apellidos, email, nickname, contrasenha) values (?,?,?,?,?)', [nombre, apellidos, email, nickname, contrasenha], (err, result) => {
+        let q = 'insert into usuarios (email, nickname, contrasenha) values (?, ?, ?)';
+        db.get().query(q, [email, nickname, contrasenha], (err, result) => {
             if (err) reject(err)
             resolve(result)
         });
     })
-
 }
 
 const getByEmail = (email) => {

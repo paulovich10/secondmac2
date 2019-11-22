@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-registration',
@@ -7,8 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
+  formulario: FormGroup;
+  constructor(private usuariosService: UsuariosService) {
 
-  constructor() {
+    this.formulario = new FormGroup({
+      email: new FormControl('', [
+
+      ]),
+      nickname: new FormControl('', [
+
+      ]),
+
+      contrasenha: new FormControl('', [
+
+      ])
+
+
+    })
 
 
   }
@@ -18,6 +35,21 @@ export class RegistrationComponent implements OnInit {
 
 
 
+  }
+
+  onSubmit() {
+
+    this.usuariosService.create(this.formulario.value)
+      .then(response => {
+
+        console.log(response)
+      })
+
+      .catch(err => {
+        console.log(err)
+        alert('Error en el registro. Inténtalo más tarde. 2');
+
+      })
   }
 
 

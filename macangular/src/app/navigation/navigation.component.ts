@@ -7,20 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-  mostrarLogin: boolean;
 
   constructor() {
 
-    this.mostrarLogin = false;
-   }
+  }
 
   ngOnInit() {
   }
 
-  toggleLogin() {
-
-    this.mostrarLogin = !this.mostrarLogin;
-  }
 
 
 

@@ -13,14 +13,10 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'profile', component: ProfileComponent },
-  {
-    path: 'registration', component: RegistrationComponent, children: [
-      { path: '', component: ComputerComponent },
-      { path: 'computer', component: ComputerComponent },
-      { path: 'usuario', component: UsuarioComponent }
+  { path: 'registration', component: RegistrationComponent },
+  { path: 'computer', component: ComputerComponent },
+  { path: 'usuario', component: UsuarioComponent }
 
-    ]
-  }
 ];
 
 @NgModule({

@@ -2,31 +2,22 @@
 
     <div class="usuario wrapperForm flex flex-column justify-center">
 
-        <h3 class="cabecera">Vende tu dispositivo</h3>
+        <h3 class="cabecera">Entrar en mi cuenta</h3>
         <form action="" class="flex flex-column justify-center content-center">
 
 
-            <label for="nombre">Nombre</label>
-            <input type="text">
-
-
-            <label for="apellidos">Apellidos</label>
-            <input type="text">
-
-
-            <label for="contrasenha">Email</label>
-            <input type="text">
-
-
-            <label for="nickname">Usuario</label>
+            <label for="Email">Email</label>
             <input type="text">
 
             <label for="contrasenha">Contraseña</label>
             <input type="text">
 
-
-
             <input class="btn" type="submit" value="Enviar">
+
+            <p>¿Eres nuevo? Crea tu cuenta de SecondMac</p>
+
+            <button [routerLink]="['/registration']">Crear cuenta</button>
+
         </form>
 
     </div>

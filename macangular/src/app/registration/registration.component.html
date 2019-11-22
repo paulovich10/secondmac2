@@ -1,1 +1,28 @@
-<router-outlet></router-outlet>
+<section class="flex justify-center">
+
+    <div class="usuario wrapperForm flex flex-column justify-center">
+
+        <h3 class="cabecera">Nuevo registro</h3>
+        <form action="" [formGroup]="formulario" class="flex flex-column justify-center content-center">
+
+            <label for="email">Email</label>
+            <input formControlName="email" type="text">
+
+            <label for="nickname">Usuario</label>
+            <input formControlName="nickname" type="text">
+
+            <label for="contrasenha">Contraseña</label>
+            <input formControlName="contrasenha" type="password">
+
+            <label for="contrasenha">Repite contraseña</label>
+            <input type="password">
+
+
+
+
+            <input class="btn" type="submit" value="Enviar" (click)="onSubmit()">
+        </form>
+
+    </div>
+
+</section>
