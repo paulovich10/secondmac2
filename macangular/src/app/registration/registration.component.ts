@@ -41,8 +41,13 @@ export class RegistrationComponent implements OnInit {
 
     this.usuariosService.create(this.formulario.value)
       .then(response => {
+        if (response['nickname']) {
+          console.log(response)
+        } else if (response['error']) {
 
-        console.log(response)
+          alert(response['error'])
+        }
+
       })
 
       .catch(err => {
