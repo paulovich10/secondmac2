@@ -14,7 +14,7 @@ export class UsuariosService {
 
   constructor(private http: HttpClient) {
 
-    this.baseUrl = "http://localhost/3000/api/usuarios"
+    this.baseUrl = "http://localhost:3000/api/usuarios"
   }
 
   getAllOpiniones(): Promise<Opinion[]> {

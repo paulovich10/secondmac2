@@ -2,6 +2,8 @@
 
     <div class="usuario wrapperForm flex flex-column justify-center">
         <p *ngIf="parrafoValidacion">Usuario dado de alta correctamente</p>
+        <p *ngIf="parrafoNegacion">Email ya existente</p>
+
 
         <h3 class="cabecera">Nuevo registro</h3>
         <form action="" [formGroup]="formulario" class="flex flex-column justify-center content-center">

@@ -49,10 +49,10 @@ export class RegistrationComponent implements OnInit {
         if (response['token'] && response['username']) {
           localStorage.setItem('user-token', response['token']);
           localStorage.setItem('username', response['username']);
-          this.parrafoValidacion = true;
+          alert('usuario registrado con exito')
         } else if (response['error']) {
 
-          this.parrafoNegacion = true;
+          alert(response['error']);
         }
       })
 

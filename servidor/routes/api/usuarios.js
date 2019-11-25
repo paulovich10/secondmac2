@@ -40,14 +40,14 @@ router.post('/registro', async (req, res) => {
         try {
             result = await modelUsuarios.insert(req.body);
             usuario = await modelUsuarios.getById(result.insertId);
-            console.log('usuario', usuario)
-            console.log(result)
+            //console.log('usuario', usuario)
+            //console.log(result)
         } catch (err) {
             console.log(err);
         }
 
         //res.json(usuario);
-        //esta es la rspuesta del servidor: almaceno en el token el id de usuario,  cuando se ha creado y cuándo expira con moment. La respuesta que llega al servicio del front es token y username. 
+        //esta es la rspuesta del servidor: almaceno en el token el id de usuario,  cuando se ha creado y cuándo expira c. La respuesta que llega al servicio del front es token y username. 
         res.json({
             token: createToken(usuario),
             username: usuario.usuario

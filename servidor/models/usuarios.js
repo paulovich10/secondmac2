@@ -21,6 +21,7 @@ const getByEmail = (email) => {
                 if (err) reject(err)
                 rows.length == 0 ? resolve(false) : resolve(rows[0]);
 
+
             })
 
     })
