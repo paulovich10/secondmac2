@@ -10,7 +10,11 @@ import { UsuariosService } from '../usuarios.service';
 export class RegistrationComponent implements OnInit {
 
   formulario: FormGroup;
+  parrafoValidacion: boolean;
+  parrafoNegacion: boolean;
   constructor(private usuariosService: UsuariosService) {
+    this.parrafoValidacion = false;
+    this.parrafoNegacion = false;
 
     this.formulario = new FormGroup({
       email: new FormControl('', [
@@ -41,13 +45,15 @@ export class RegistrationComponent implements OnInit {
 
     this.usuariosService.create(this.formulario.value)
       .then(response => {
-        if (response['nickname']) {
-          console.log(response)
+        //del back viene token con su expiracion y cuándo se creó por lo que lo almaceno en el localstorage de las cabeceras el token con su clave y el usuario--> esto me devolverá user-token: token codificado, username: lo que sea.
+        if (response['token'] && response['username']) {
+          localStorage.setItem('user-token', response['token']);
+          localStorage.setItem('username', response['username']);
+          this.parrafoValidacion = true;
         } else if (response['error']) {
 
-          alert(response['error'])
+          this.parrafoNegacion = true;
         }
-
       })
 
       .catch(err => {

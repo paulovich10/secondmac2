@@ -19,7 +19,7 @@ const getByEmail = (email) => {
             [email], (err, rows) => {
 
                 if (err) reject(err)
-                rows.length == 0 ? resolve('No existe usuario con ese email') : resolve(rows[0]);
+                rows.length == 0 ? resolve(false) : resolve(rows[0]);
 
             })
 
