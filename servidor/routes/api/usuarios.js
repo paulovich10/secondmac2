@@ -1,11 +1,11 @@
 let express = require('express');
 let router = express.Router();
 const bcrypt = require('bcrypt');
-let jwt = require('jwt-simple')
-//const bcrypt = require('bcrypt');
+//let jwt = require('jwt-simple')
+
 
 let modelUsuarios = require('../../models/usuarios');
-//let modelProductos = require('../../models/productos');
+
 
 // router.get('/:usuarioId', (req, res) => {
 
