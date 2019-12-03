@@ -25,11 +25,17 @@ export class UsuariosService {
   }
 
   create(values): Promise<any> {
-
-    return this.http.post<any>(`${this.baseUrl}/registro`, values).toPromise();
-
+    //console.log(values)
+    return this.http.post(`${this.baseUrl}/registro`, values).toPromise();
 
   }
+
+  login(val): Promise<any> {
+    console.log(val)
+    return this.http.post(`${this.baseUrl}/login`, val).toPromise();
+  }
+
+
 
 }
 

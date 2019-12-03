@@ -6,3 +6,8 @@ button {
     font-size: 1rem;
     width: 200px;
 }
+
+input[type="submit"] {
+
+    cursor: pointer;
+}

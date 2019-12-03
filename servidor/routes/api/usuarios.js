@@ -1,5 +1,6 @@
 let express = require('express');
 let router = express.Router();
+const bcrypt = require('bcrypt');
 let jwt = require('jwt-simple')
 //const bcrypt = require('bcrypt');
 
@@ -22,9 +23,8 @@ let modelUsuarios = require('../../models/usuarios');
 
 
 router.post('/registro', async (req, res) => {
-    console.log(req.body);
-    //req.body.password = bcrypt.hashSync(req.body.password, 10);
 
+    req.body.contrasenha = bcrypt.hashSync(req.body.contrasenha, 10);
     try {
         let email = await modelUsuarios.getByEmail(req.body.email)
         let username = await modelUsuarios.getByNickname(req.body.nickname)
@@ -46,12 +46,14 @@ router.post('/registro', async (req, res) => {
             console.log(err);
         }
 
-        //res.json(usuario);
-        //esta es la rspuesta del servidor: almaceno en el token el id de usuario,  cuando se ha creado y cuándo expira c. La respuesta que llega al servicio del front es token y username. 
-        res.json({
-            token: createToken(usuario),
-            username: usuario.usuario
-        });
+        res.json(usuario);
+        console.log(usuario)
+
+        //esta es la respuesta del servidor: almaceno en el token el id de usuario,  cuando se ha creado y cuándo expira. La respuesta que llega al servicio del front es token y username. 
+        // res.json({
+        //     token: createToken(usuario),
+        //     username: usuario.usuario
+        // });
 
 
     } catch (err) {
@@ -59,18 +61,36 @@ router.post('/registro', async (req, res) => {
     }
 });
 
-const createToken = (pUser) => {
 
-    const payload = {
+router.post('/login', (req, res) => {
+    modelUsuarios.getByEmail(req.body.email)
+        .then((user) => {
+            if (user == null) return res.json({ error: 'email y/o contraseña erroneos' })
+            bcrypt.compare(req.body.contrasenha, user.contrasenha, (err, same) => {
+                if (err) return res.json({ error: 'Error!!!!' })
+                if (!same) return res.json({ error: 'Usuario y o contraseña erroneos (2)' })
+                res.json(user);
+            })
 
-        userId: pUser.id,
-        createdAt: moment().unix(),
-        expiresAt: moment.add(20, 'minutes').unix()
+        })
 
-    }
+        .catch(err => {
+            res.json(err)
+        })
+})
 
-    return jwt.encode(payload, process.env.TOKEN_KEY)
-}
+// const createToken = (pUser) => {
+
+//     const payload = {
+
+//         userId: pUser.id,
+//         createdAt: moment().unix(),
+//         expiresAt: moment.add(20, 'minutes').unix()
+
+//     }
+
+//     return jwt.encode(payload, process.env.TOKEN_KEY)
+// }
 
 
 // router.post('/producto', async (req, res) => {
@@ -88,5 +108,6 @@ const createToken = (pUser) => {
 
 //     res.json(product);
 // });
+
 
 module.exports = router;

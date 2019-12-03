@@ -15,16 +15,18 @@ const insert = ({ email, nickname, contrasenha }) => {
 
 const getByEmail = (email) => {
     return new Promise((resolve, reject) => {
-        db.get().query('select * from usuarios where email= ?',
+        db.get().query('select * from usuarios where email = ?',
             [email], (err, rows) => {
 
                 if (err) reject(err)
-                rows.length == 0 ? resolve(false) : resolve(rows[0]);
-
+                rows.length == 0 ? resolve(null) : resolve(rows[0]);
+                console.log(rows[0])
 
             })
 
     })
+
+
 
 }
 
